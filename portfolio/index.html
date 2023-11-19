@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge ">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Lai Xuan Ying Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d44946cc27.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <a href= "#header"><img src = "images/logo4.png" class="logo"></a>
+            <ul id="sidemenu">
+                <li><a href= "#header">Home</a></li>
+                <li><a href= "#about">About</a></li>
+                <li><a href= "#services">Work</a></li>
+                <li><a href= "#portfolio">Activities</a></li>
+                <li><a href= "#post">Blogs</a></li>
+                <li><a href= "#contact">Contact</a></li>
+                
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p><font size="+3"><bold><span class="typed" data-typed-items = "Designer, Developer, Freelancer, Traveller"></bold></span></p></font>
+            <h1> Good day, I'm <span>Xuan Ying.</span><br></h1>
+            <p><font size="+2"><span class="header-text-words">  A Computer Science fresh graduate seeking a job.</span></font></p>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+
+<div id="about">
+    <div class = "container">
+        <div class = "row">
+            <div class="about-col-1">  <!-- .about-col-1 -->
+                <img src = "images/user2.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <br><p> <font size="+1"> From my career objective, I am seeking a dynamic role in the 
+                    IT field that allows me to leverage my skills and expertise. I am particularly interested
+                    in opportunities related to business analyst, cloud computing, quality assurance and web 
+                    design as full-time job. Dedicated to delivering innovative solutions, I aim to collaborate 
+                    with diverse clients and projects, honing technical abilities and 
+                    fostering professional growth. </font></p><br>
+                <div class="tab-titles">
+                    <p class ="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class ="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class ="tab-links" onclick="opentab('education')">Education</p>
+                </div>    
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Coding Language - C, C++, C#, Java, JavaScript</span><br>
+                            - Developed and designed few multifunctional programs, eg. simple stock management system, portfolio website..</li><br>
+                        <li><span>Database Skills - MySQL and Oracle</span><br>
+                            - Developed and designed a simple hospital management system</li><br>
+                        <li><span>Markup Language - HTML5, Bootstrap, CSS, AJAX, JavaScript, React</span><br>
+                            - Developed and designed a simple car rental website.</li><br>
+                        <li><span>A.I and Data Science - Python, R language</span><br>
+                            - Finding tasks of salary and abalonecharacteristics.</li><br>   
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Oct 2023 - Nov 2023</span><br><b>Software Engineering Trainee at (SE) Train & Place Upskilling Program (WFH) </b><br>
+                            -> Referee: Mr Lee ( weisin@usainsgroup.com)<br>
+                            -> This program is funded by MPC, supported byMSIA & EEPN and manged by USAINS <br>
+                            -> To equip industrial competency skillsets &essential soft skills for industrial employement</li><br>
+                        <li><span>Nov 2022 - March 2023</span><br><b>Park Crew at SeaWorld 
+                            Entertainment, Inc, USA</b><br>
+                            -> Food and Beverage Retail Concessions in Busch Garden Williamsburg by providing exemplary service and perform food prep work,
+                             Park Operational Ambassador in SeaWorld Orlando by responsible on management and upkeep of the Orca Stadium</li><br>
+                        <li><span>Oct 2021 - Jan 2022</span><br><b>Software Tester at Qynix Technologies Sdn. Bhd, Penang</b><br>
+                            -> Internship: Testing Warehouse Operation Management system with different kinds scenarios under pre-requirement and logically and setting up documentation.
+                        </li><br>
+                            
+                        <!--<li><span>Freelance</span><br><b>Sales Promoter and Roving Team
+                            at Forth Dimension Events Sdn.Bhd, KL</b><br>
+                            -> Build a positive brand presence and develop products with marketing strategies, distributing samples and demonstrations
+                        </li><br>-->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span> Oct 2019 - Oct 2023 </span><br><b>Bachelor of Computer Science 
+                            in UTAR</b><br>
+                            -> CGPA 3.40 <br>
+                            -> MUET in Band 4 (2019) <br>
+                            -> Dean list in Oct 2020 with GPA 3.67 <br>
+                            -> UTAR Soft Skills Development CertificateProgramme (USSDC) : Distinction Grading <br>
+                        </li><br>
+                        <li><span> May 2018 - Oct 2019</span><br><b> Foundation Science Stream 
+                            in UTAR</b></li><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------- Work --------------->
+
+<div id = "services">
+    <div class = "container">
+        <h1 class="sub-title">My Work</h1>
+        <div class = "services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2> Web Design </h2>
+                <p>
+                    Developed and designed a simple car rental website.
+                </p>
+                <a href="https://xuanyinglai.azurewebsites.net/LuluCar_Final/index.html" target="_blank" > Learn more </a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2> Cloud Experience </h2>
+                <p>
+                    - AZ-900: Azure Fundamentals certified<br>
+                    - Alibaba Cloud Certified<br>
+                    - Contributed to a smart parcel box system<br>
+                </p>
+                <a href="images\Cloud_Experience_Certifications.zip" target="_blank"> Learn more </a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2> Natural Language Processing </h2>
+                <p>
+                    Final Year Project is Toxic Friend Detector to identify 
+                    an individual’s emotions and personality by using speech data.
+                </p>
+                <a href="http://eprints.utar.edu.my/4695/" target="_blank" > Learn more </a>
+            </div>
+        </div>
+        <a href="#" class = "btn"> See more - Coming Soon !</a>
+    </div>
+</div>
+
+<!---------- Activities --------------->
+<div id = "portfolio">
+    <div class = "container">
+        <h1 class="sub-title">My Activities</h1>
+        <div class="work-list">
+            <div class = "work">
+                <img src=" images/society.jpg">
+                <div class="layer">
+                    <h3><b> Society Activities </b></h3>
+                    <p> - Chairperson of UTAR Computer Society in 2021/2022 <br>
+                        - Chairperson of UTAR Kampar Traveler's Den in 2021/2022 <br>
+                        - Committee Member of UTAR Kampar Traveler's Den in 2021/2022 <br><br><br>
+                    </p>
+                    <a href="https://www.instagram.com/p/Cg4MdsIrzy-/?utm_source=ig_web_copy_link" target="_blank" ><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src=" images/skydive.jpg">
+                <div class="layer">
+                    <h3><b> Work and Travel in USA</b> </h3>
+                    <p> It's an exchange programme to step out of my comfort zone and explore new experiences 
+                        in a foreign country. Good to learn about different aspects of 
+                        American life and expand my horizons. <br><br><br> </p>
+                    <a href="https://www.instagram.com/p/CzBUWvrv_Sm/?utm_source=ig_web_copy_link&igshid=ODhhZWM5NmIwOQ==" target="_blank" ><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src=" images/dive.jpg">
+                <div class="layer">
+                    <h3><b> Open Water Diving </b></h3>
+                    <p> NDL certification number = TH 1-27909, issued on  May 24th, 2023. 
+                        The diving center is Maori Dive Academy, Pulau Tioman, Malaysia.<br><br><br> </p>
+                    <a href="https://ndl-global.com/people/Mjc5OTE" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class = "btn"> See more - Coming Soon !</a>
+    </div>
+</div>
+
+
+<!---------- Blog --------------->
+<div id = "post">
+    <div class = "container">
+        <h1 class="sub-title">My Blogs</h1>
+        <div class = "post-filter container">
+            <span class = "filter-item active-filter" data-filter = 'all' > All</span>
+            <span class = "filter-item" data-filter = 'malaysia' > Malaysia </span>
+            <span class = "filter-item" data-filter = 'usa' > USA </span>
+            <span class = "filter-item" data-filter = 'japan' > Japan</span>
+            <span class = "filter-item" data-filter = 'china' > China</span>
+            <br><br><br><br>
+        </div>   
+            <!-------Posts--------->
+            <section class = "post containter">
+                <!-------Post Box 1--------->
+                <div class = "post-box malaysia">
+                    <img src ="images/msia1.jpg" alt="malaysia" class = "post-img">
+                    <h2 class = " category">Malaysia</h2>
+                    <a href = "post-content/post-content-msia1.html" target="_blank" class = "post-title">
+                        Independece Day in Malaysia on 31 August 2023
+                    </a>
+                    
+                    <p class = "post-description"> It's an extra special as we dive into the heart of Malaysia's Independence Day celebration. August 31st marks the day when Malaysia gained its independence back in 1957, and I'm thrilled to be right here in Kuala Lumpur to experience the festivities firsthand.</p>
+                    <p><span class = "post-date"> <i class="fa-solid fa-calendar-days"></i> &nbsp 31 August 2023</span></p>
+                </div>
+
+                <!-------Post Box 2--------->
+                <div class = "post-box usa">
+                    <img src ="images/usa1.jpg" alt="usa" class = "post-img">
+                    <h2 class = "category"> USA</h2>
+                    <a href = "post-content/post-content-usa1.html" target="_blank" class = "post-title">
+                        Work and Travel with my Malaysian buddies 
+                    </a>
+                    <p class = "post-description"> Worked with people from different corners of the globe. The diversity is mind-blowing, and I've made some lifelong friends. Our weekends are a mix of laughter, exploring, and creating memories.</p>
+                    <p><span class = "post-date"> <i class="fa-solid fa-calendar-days"></i> &nbsp 12 April 2023</span></p>
+                </div>
+
+                <!-------Post Box 3--------->
+                <div class = "post-box japan">
+                    <img src ="images/japan1.jpg" alt="japan" class = "post-img">
+                    <h2 class = "category">Japan</h2>
+                    <a href = "post-content/post-content-japan1.html" target="_blank" class = "post-title">
+                        Short and thriled backpack trip with families in Japan 
+                    </a>
+                    <p class = "post-description"> Japan, you were a feast of contrasts – modern yet traditional, bustling yet serene. This short trip was an exhilarating glimpse into the Land of the Rising Sun. Until next time, sayonara!</p>
+                    <p><span class = "post-date"> <i class="fa-solid fa-calendar-days"></i> &nbsp 25 June 2016 </span></p>
+                    
+                </div>
+
+            </section> 
+            <a href="post-page.html" target="_blank" class = "post-page-btn"> See more My Blogs !</a> 
+    </div>
+</div>
+
+                
+<br><br>
+<!---------- Contact--------------->
+<div id = "contact">
+    <div class = "container">
+        <div class="row">
+            <div class = "contact-left">
+                
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-envelope"></i><a href="mailto:name@domain.com">xuanyinglai@gmail.com</a></p>
+                <p> <i class="fa-solid fa-phone"></i> 011-10415502 </p>
+                <div class="social-icons">
+                    <a href="https://github.com/Xuanyinglai" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/xuanyinglai/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/xuanyinglai/" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/xuan-ying-lai-515575222/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://web.telegram.org/k/#@xuanyinglai" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://wa.link/dbtpqe" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <!-- <a href = "images/Lai_Xuan_Ying_Resume.pdf" download class="btn btn2" target="_blank"> Download CV</a> -->
+                <a href = "images/Resume_Lai_Xuan_Ying.pdf" class="btn btn2" target="_blank"> My Resume </a>
+            </div>
+            <div class = "contact-right">
+                <form name = "submit-to-google-sheet">
+                    <input type= "text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name= "Message" rows="6" placeholder = "Your Message"></textarea>
+                    <button type= "submit" class="btn btn2"> Submit </button>     
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>        
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Lai Xuan Ying <br><br> 
+            <span>*Updated on 19 November 2023*</span></p> 
+    </div>
+</div>
+
+
+<script>
+    //header design = Designer, freelancer, developer, travelller....
+    const typed = document.querySelector('.typed');
+    if(typed){
+        let typed_strings = typed.getAttribute( 'data-typed-items');
+        typed_strings = typed_strings.split(',');
+        new Typed('.typed' ,{
+            strings: typed_strings,
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 200
+        })
+
+    }
+
+</script>
+
+
+<script>
+        //filter js
+        $(document).ready(function(){
+            $(".filter-item").click(function(){
+                const value = $(this).attr("data-filter");
+                if(value == "all"){
+                    $(".post-box").show("1000");
+                } 
+                else{
+                    $(".post-box")
+                    .not("." + value)
+                    .hide("1000");
+
+                    $(".post-box")
+                    .filter("." + value)
+                    .show("1000");
+                }
+            });
+        
+        //add active to btn
+        $(".filter-item").click(function(){
+            $(this).addClass("active-filter").siblings().removeClass("active-filter");
+        });
+        });
+</script>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";  
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";  
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwO3emoOMxeq6qVMFM3da-tSksX-VHWg_VTH4MJ5khry2NS_siK4PN2YQ_h12rIwAkY/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Your messages are sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+
+
+</body>
+</html>

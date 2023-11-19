@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge ">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Lai Xuan Ying Blogs Content</title>
+    <link rel="stylesheet" href="/portfolio/post-page-style.css">
+    <script src="https://kit.fontawesome.com/d44946cc27.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <a href= "#header"><img src = "/portfolio/images/logo4.png" class="logo"></a>
+            <ul id="sidemenu">
+                <li><a href= "/portfolio/post-page.html">My Blogs</a></li>
+                <li><a href= "/portfolio/index.html">Back to Home</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+
+
+
+<!---------- Post-content --------------->
+<div id = "post-page-content">
+    <div class = "container">
+        <h1 class="sub-title">My Blog Content</h1>
+        <section class = "post-header">
+            <div class = "header-content post-container">
+                <h1 class = "header-title"> Desert Dreaming: A Road Trip Odyssey Through Arizona, Utah, and Nevada </h1>
+                <img src ="/portfolio/images/usa5.jpg" alt="usa" class = "header-img">
+            </div>
+        </section>
+        <section class = "post-content post-container">
+            <p><span class = "post-date"> <i class="fa-solid fa-calendar-days"></i> &nbsp 12 April 2023</span></p>
+                <p class = "post-text">
+                    Excited on an epic road trip through the arid landscapes of Arizona, Utah, and Nevada.
+                         The journey began at the iconic Grand Canyon, where the vastness of nature took center stage. Explored the
+                          mesmerizing Lower Antelope Canyon, a slot canyon painted with swirling hues and ethereal light.
+
+                        The adventure continued to the Horseshoe Bend, a meander in the Colorado River that carved a stunning 
+                        horseshoe-shaped curve into the landscape. As the sun dipped below the horizon, the canyon glowed with 
+                        warm hues, creating a breathtaking spectacle.
+                        
+                        Navigating through the scenic highways, the road trip embraced the diverse beauty of the desert, from 
+                        the rugged terrains of Utah to the dazzling lights of Nevada. Each mile brought a new vista, a testament 
+                        to the enchanting landscapes that define the American Southwest.</p>
+        </section>
+    </div>
+</div>    
+
+<!---------- Contact--------------->
+<div id = "contact">
+    <div class = "container">
+        <div class="row">
+            <div class = "contact-left"> 
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-envelope"></i><a href="mailto:name@domain.com">xuanyinglai@gmail.com</a></p>
+                <p> <i class="fa-solid fa-phone"></i> 011-10415502 </p>
+                <div class="social-icons">
+                    <a href="https://github.com/Xuanyinglai" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/xuanyinglai/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/xuanyinglai/" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/xuan-ying-lai-515575222/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://web.telegram.org/k/#@xuanyinglai" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://wa.link/dbtpqe" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <!-- <a href = "images/Lai_Xuan_Ying_Resume.pdf" download class="btn btn2" target="_blank"> Download CV</a> -->
+                
+            </div>
+            <div class = "contact-right">
+                <form name = "submit-to-google-sheet">
+                    <input type= "text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name= "Message" rows="6" placeholder = "Your Message"></textarea>
+                    <button type= "submit" class="btn btn2"> Submit </button>     
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>        
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Lai Xuan Ying <br><br> 
+            <span>*Updated on 19 November 2023*</span></p> 
+    </div>
+</div>
+
+
+<script>
+    const typed = document.querySelector('.typed');
+    if(typed){
+        let typed_strings = typed.getAttribute( 'data-typed-items');
+        typed_strings = typed_strings.split(',');
+        new Typed('.typed' ,{
+            strings: typed_strings,
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 200
+        })
+
+    }
+
+</script>
+
+
+<script>
+        //filter js
+        $(document).ready(function(){
+            $(".filter-item").click(function(){
+                const value = $(this).attr("data-filter");
+                if(value == "all"){
+                    $(".post-box").show("1000");
+                } 
+                else{
+                    $(".post-box")
+                    .not("." + value)
+                    .hide("1000");
+
+                    $(".post-box")
+                    .filter("." + value)
+                    .show("1000");
+                }
+            });
+        
+        //add active to btn
+        $(".filter-item").click(function(){
+            $(this).addClass("active-filter").siblings().removeClass("active-filter");
+        });
+        });
+</script>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";  
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";  
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwO3emoOMxeq6qVMFM3da-tSksX-VHWg_VTH4MJ5khry2NS_siK4PN2YQ_h12rIwAkY/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Your messages are sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+
+
+</body>
+</html>

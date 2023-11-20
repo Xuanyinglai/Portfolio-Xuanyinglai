@@ -44,9 +44,7 @@ https://fontawesome.com/icons : For some cute and interesting free icons
 
 https://github.com/jamiewilson/form-to-google-sheets : For the section Contact to receive the messages in the google form
 
-https://youtu.be/0YFrGy_mzjY?si=krgRyHQHZ5Sx6Cz0 : For main webpage 
 
-https://youtu.be/gZHjMVE_e10?si=M3S5WLP1mKPLxF54 : For blog webpage
 
 
 
